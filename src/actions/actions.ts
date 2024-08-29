@@ -1,32 +1,14 @@
-"use server";
+// "use server";
 
-import { revalidatePath } from "next/cache";
+// import { signIn, signOut } from "@/app/Auth";
 
-export async function addProduct(prevState: any, formData: FormData) {
-  const product = {
-    name: formData.get("name"),
-    price: formData.get("price"),
-    type: formData.get("type"),
-    rate: formData.get("rate"),
-  };
+// export async function signInWithGoogleAction() {
+//     await signIn("google");
+// }
+// export async function signInWithFacebookAction() {
+//     await signIn("facebook");
+// }
 
-  try {
-    const res = await fetch("https://e-commerce-c5320-default-rtdb.europe-west1.firebasedatabase.app/products.json", {
-      method: "POST",
-      body: JSON.stringify(product),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    revalidatePath("/");
-
-    return {
-      message: "Created Successfully",
-    };
-  } catch (err) {
-    return {
-      message: (err as string) ?? "Something went wrong",
-    };
-  }
-}
+// export async function signOutAction() {
+//     await signOut();
+// }

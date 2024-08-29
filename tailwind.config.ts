@@ -20,8 +20,18 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          // DEFAULT: "hsl(var(--primary))",
+          // foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#FEBF31",
+          foreground: "#3C3C3B",
+        },
+        categories: {
+          electronics: "#66D1C8",
+          food: "#FEBF31",
+          homeAndPetCare: "#F03351",
+          beverages: "#9ACE3B",
+          healthAndPersonalCare: "#3C3C3B",
+          babyAndToddler: "#E7E4E3",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

@@ -1,5 +1,3 @@
-import { DocumentReference } from "firebase/firestore";
-
 export interface PRODUCT {
   id: string;
   data: {
@@ -8,7 +6,7 @@ export interface PRODUCT {
     model: string;
     stock: number;
     subCategory: string;
-    category: DocumentReference;
+    category: string;
     rating: number;
     ratings: { [key: string]: number }[];
     brand: string;
@@ -22,3 +20,23 @@ export interface PRODUCT {
     };
   };
 }
+
+export type PRODUCT_DATA = {
+  discount?: number;
+  name?: string;
+  model?: string;
+  stock?: number;
+  subCategory?: string;
+  category?: string;
+  rating?: number;
+  ratings?: { [key: string]: number }[];
+  brand?: string;
+  images?: string[];
+  price?: number;
+  reviews?: { rating: number; review: string; user: string }[];
+  overview?: {
+    highlights: string;
+    overview: string;
+    specifications: { [key: string]: string }[];
+  };
+};
